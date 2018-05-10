@@ -4,7 +4,7 @@
 # in a single Terraform file from a list of current Pingdom IPv4 probe server IPs.
 # This can be used to easily whitelist Pingdom probes in an AWS WAF Web ACL.
 
-# Requires jq, wget, perl
+# Requires wget, perl
 
 # Set Variables
 FriendlyName="Allow From Pingdom"
@@ -80,7 +80,7 @@ function probeIPs(){
 	echo
 }
 
-# Builds the JSON for 101-150 rules
+# Build the Terraform resource blocks
 function buildTF(){
 	if [[ $DEBUGMODE = "1" ]]; then
 		echo "function buildTF"
@@ -187,7 +187,7 @@ EOP
 # Run the script and call functions
 
 # Check for required applications
-check_command jq wget perl
+check_command wget perl
 
 probeIPs
 
