@@ -25,6 +25,7 @@ Terraform is an open source tool for infrastructure as code that enables you to 
 
 ## Tools included in this repo:
 
+- **[terraform-aws-waf-iplist.sh](terraform-aws-waf-iplist.sh)** Generate a Terraform AWS WAF IPSet, WAF Rule, and WAF Web ACL resource blocks for IPs in file iplist
 - **[terraform-aws-waf-pingdom.sh](terraform-aws-waf-pingdom.sh)** Generate a Terraform AWS WAF IPSet, WAF Rule, and WAF Web ACL resource blocks for Pingdom probe server IPs
 - **[terraform-redact-iam-secrets.sh](terraform-redact-iam-secrets.sh)** Replaces AWS IAM Secret Keys and IAM SES SMTP Passwords with "REDACTED" in Terraform state files
 
